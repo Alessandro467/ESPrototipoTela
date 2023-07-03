@@ -94,7 +94,7 @@ public class TelaPrincipal {
 		JMenu menuConsultar = new JMenu("Consulta");
 		barraMenu.add(menuConsultar);
 		
-		JMenuItem mntmAnimal = new JMenuItem("Animal");
+		JMenuItem mntmAnimal = new JMenuItem("Cliente");
 		mntmAnimal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAnimal tela = new TelaCrudAnimal();
@@ -104,7 +104,14 @@ public class TelaPrincipal {
 		});
 		menuConsultar.add(mntmAnimal);
 		
-		JMenuItem mntmCliente = new JMenuItem("Cliente");
+		JMenuItem mntmCliente = new JMenuItem("Animal");
+		mntmCliente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCrudCliente tela = new TelaCrudCliente();
+				tela.setVisible(true);
+				desktop.add(tela);
+			}
+		});
 		menuConsultar.add(mntmCliente);
 		
 		JMenu menuAjuda = new JMenu("Ajuda");
